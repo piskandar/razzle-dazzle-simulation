@@ -1,0 +1,24 @@
+<div style="display: flex; height: 100%;">
+  <app-number-board style="width: 50%"></app-number-board>
+  <div style="width: 50%">
+    <app-scoring-board [sum]="gameService.sum"></app-scoring-board>
+    <app-status-board></app-status-board>
+    <button (click)="start()">Start</button>
+    <button (click)="stop()">Stop</button>
+    <button (click)="reset()">Reset</button>
+    <div>{{gameService.average}}</div>
+    <div>{{gameService.runs}}</div>
+    <div style="display: flex; justify-content: space-between">
+      <div *ngFor="let recipient of gameService.distribution  | keyvalue | slice:0:21; let i =index" >
+        <div>{{recipient.key}}</div>
+        <div>{{recipient.value}}</div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between">
+      <div *ngFor="let recipient of gameService.distribution  | keyvalue | slice:21:41; let i =index" >
+        <div>{{recipient.key}}</div>
+        <div>{{recipient.value}}</div>
+      </div>
+    </div>
+  </div>
+</div>

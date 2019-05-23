@@ -1,0 +1,30 @@
+<div class="status-board">
+
+  <div style="display: flex; justify-content: space-around">
+    <div class="item">
+      <div class="header">Game Number:</div>
+      <div >{{gameService.gameNumber}}</div>
+    </div>
+
+    <div class="item">
+      <div class="header">Points:</div>
+      <div>{{gameService.pointsTotal}}</div>
+    </div>
+    <div class="item">
+      <div class="header">Prize Count:</div>
+      <div>{{gameService.prizeCount}}</div>
+    </div>
+  </div>
+  <div  style="display: flex; justify-content: space-around">
+    <div class="item">
+      <div class="header">Money Spent:</div>
+      <div>{{gameService.moneySpent | currency}}</div>
+    </div>
+    <div class="item">
+      <div class="header">Game Cost:</div>
+      <div>{{gameService.gameCost | currency}}</div>
+    </div>
+  </div>
+
+
+</div>

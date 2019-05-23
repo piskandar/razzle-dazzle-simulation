@@ -1,0 +1,62 @@
+.scoring-box {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  font-size: 11pt;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  width: 12.5%;
+  .num {
+    font-size: 16pt;
+  }
+}
+
+.scoring-board {
+  .prize {
+    @extend .scoring-box;
+    color: green;
+
+  }
+
+  .points {
+    @extend .scoring-box;
+    color: maroon;
+  }
+
+  .black {
+    @extend .scoring-box;
+    color: black;
+  }
+
+  .selected {
+    background-color: yellow;
+  }
+
+  .hidden {
+    @extend .scoring-box;
+    color: white;
+  }
+
+
+  $colors-list: rgb(94, 79, 162) rgb(53, 130, 186) rgb(92, 183, 169) rgb(152, 213, 164) rgb(208, 236, 156) rgb(243, 250, 173) rgb(254, 240, 167) rgb(253, 205, 123) rgb(250, 156, 88) rgb(238, 100, 69) rgb(208, 56, 77) rgb(158, 1, 66);
+  @each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    .level-#{$i} {
+      background-color: nth($colors-list, $i);
+    }
+  }
+  //.level1 {
+  //  background-color: #100;
+  //}
+  //.level2 {
+  //  background-color: #200;
+  //}
+  //.level3 {
+  //  background-color: #300;
+  //}
+  //.level4 {
+  //  background-color: #400;
+  //}
+}

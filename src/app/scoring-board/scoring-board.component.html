@@ -1,0 +1,11 @@
+<div class="scoring-board">
+
+  <div *ngFor="let row of scoringBoard; let i=index"
+       style="display: flex">
+    <div *ngFor="let item of scoringBoard[i]"
+         [class]="getClass(item)">
+      <div class="num">{{item.num}}</div>
+      <div>{{getText(item)}}</div>
+    </div>
+  </div>
+</div>

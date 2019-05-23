@@ -1,0 +1,15 @@
+.status-board {
+  background-color: gainsboro;
+  font-size: 11pt;
+  font-family: 'Montserrat', sans-serif;
+
+  .item {
+    div {
+      text-align: center;
+    }
+
+    .header {
+      font-weight: 700;
+    }
+  }
+}

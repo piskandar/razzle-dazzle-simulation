@@ -1,0 +1,10 @@
+<div class="number-board">
+  <div *ngFor="let row of gameService.board; let i=index"
+       style="display: flex">
+    <div *ngFor="let item of gameService.board[i]"
+         class="board-item">
+      <div>{{item.num}}</div>
+      <div [class]="'circle' + (item.selected ? '':' empty')"></div>
+    </div>
+  </div>
+</div>
